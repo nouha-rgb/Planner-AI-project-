@@ -1,0 +1,186 @@
+/* =========================
+   PAGE DESTINATION
+========================= */
+.destination-page {
+  min-height: 100vh;
+  background: transparent;
+}
+
+/* =========================
+   HERO
+========================= */
+.destination-hero {
+  height: 45vh;
+  min-height: 320px;
+
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.45) 0%,
+      rgba(0,0,0,0.35) 40%,
+      rgba(0,0,0,0.15) 70%,
+      rgba(0,0,0,0) 100%
+    ),
+    url("/images/cities/marrakech/hero/marrakech-hero.jpg");
+
+  background-size: cover;
+  background-position: center 35%;
+}
+
+/* =========================
+   CONTENT
+========================= */
+.destination-hero-content {
+  max-width: 520px;
+}
+
+.destination-hero h1 {
+  font-size: clamp(2.8rem, 4vw, 3.8rem);
+  margin-bottom: 12px;
+}
+
+.destination-hero p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-bottom: 30px;
+}
+
+.destination-hero button {
+  background: linear-gradient(135deg, #d4a373, #b07d45);
+  color: white;
+  border: none;
+  padding: 14px 36px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.destination-hero button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.35);
+}
+
+/* =========================
+   SECTION WHY - CÔTE À CÔTE
+========================= */
+.destination-why-layout {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  max-width: 1200px;
+  margin: -5px auto 10px;
+  padding: 0 40px;
+}
+
+/* IMAGES À GAUCHE */
+.destination-intro-images {
+  position: relative;
+  flex-shrink: 0;
+  width: 420px;
+  height: 300px;
+  order: 2; /* Met les images à droite */
+}
+
+.intro-image-rect {
+  width: 420px;
+  height: 260px;
+  border-radius: 24px;
+  background-image: url("/images/cities/marrakech/gallery/2.jpg");
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+}
+
+.intro-image-circle {
+  position: absolute;
+  left: -30px;
+  bottom: -30px;
+
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-image: url("/images/cities/marrakech/gallery/1.jpg");
+  background-size: cover;
+  background-position: center;
+
+  border: 6px solid #fff;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.3);
+}
+
+/* TEXTE À GAUCHE */
+.destination-why {
+  position: relative;
+  flex: 1;
+  padding: 40px 50px;
+  text-align: left;
+  order: 1; /* Met le texte à gauche */
+}
+
+/* zellige en arrière-plan */
+.destination-why::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: url("/images/zellige-pattern.png");
+  background-size: 360px;
+  background-repeat: repeat;
+
+  opacity: 0.08;
+  z-index: 0;
+  border-radius: 16px;
+}
+
+/* le texte passe au-dessus */
+.destination-why > * {
+  position: relative;
+  z-index: 1;
+}
+
+.destination-why h2 {
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  color: #6b3e1e;
+}
+
+.destination-why p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 16px;
+}
+
+/* =========================
+   CONTENU SCROLLABLE
+========================= */
+.destination-scroll {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 968px) {
+  .destination-why-layout {
+    flex-direction: column;
+    margin-top: 40px;
+    gap: 40px;
+  }
+
+  .destination-intro-images {
+    width: 100%;
+    max-width: 420px;
+    order: 1; /* Images en premier sur mobile */
+  }
+
+  .destination-why {
+    text-align: center;
+    order: 2; /* Texte en second sur mobile */
+  }
+
+  .intro-image-circle {
+    left: auto;
+    right: -30px;
+  }
+}

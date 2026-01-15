@@ -1,0 +1,145 @@
+/* ================= RESET ================= */
+* {
+  box-sizing: border-box;
+}
+
+/* ================= HERO ================= */
+.activities-hero {
+  height: 85vh; /* ⚠️ pas 100vh */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Overlay sombre */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.55),
+    rgba(0, 0, 0, 0.35),
+    rgba(0, 0, 0, 0.65)
+  );
+  z-index: 1;
+}
+
+/* Contenu du hero */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+
+  padding-top: 80px; /* évite conflit navbar */
+}
+
+/* Titre */
+.hero-content h1 {
+  font-size: clamp(2.8rem, 5vw, 4.2rem);
+  font-weight: 900;
+  letter-spacing: 4px;
+}
+
+/* Sous-titre */
+.hero-content p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* ================= FILTER PANEL ================= */
+.filters-panel {
+  margin-top: 0px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 22px 26px;
+  border-radius: 22px;
+  max-width: 950px;
+  width: 90%;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Ligne de filtres */
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+/* Boutons catégories */
+.filter-chip {
+  padding: 8px 18px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+.filter-chip:hover {
+  transform: translateY(-1px);
+}
+
+.filter-chip.active {
+  background: #7b4f3c;
+  color: white;
+  border-color: #7b4f3c;
+}
+
+/* Selects (ville / budget / tri) */
+.filter-row.selects select {
+  padding: 10px 16px;
+  border-radius: 14px;
+  border: 1px solid #ddd;
+  background: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  min-width: 180px;
+}
+
+/* ================= GRID SECTION ================= */
+.activities-section {
+  position: relative;
+  z-index: 5;
+
+  background-image: url("/images/maroc-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  padding-bottom: 80px;
+}
+
+/* Grille des cartes */
+.activities-grid {
+  padding: 80px 40px 120px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 36px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    letter-spacing: 2px;
+  }
+
+  .filters-panel {
+    padding: 18px;
+  }
+
+  .filter-row.selects select {
+    min-width: 100%;
+  }
+}

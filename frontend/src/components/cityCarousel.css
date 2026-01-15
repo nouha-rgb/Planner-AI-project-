@@ -1,0 +1,97 @@
+/* ===== WRAPPER ===== */
+.city-carousel-wrapper {
+  position: relative;
+  width: 520px;
+  height: 420px;
+  overflow: hidden;
+}
+
+/* ===== CARD ===== */
+.city-card-carousel {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  height: 120px;
+  padding: 16px 22px;
+
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+
+  cursor: pointer;
+
+  /* ✨ ANIMATION CINÉMA */
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ===== IMAGE ===== */
+.city-card-carousel img {
+  width: 110px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* ===== TEXTE ===== */
+.city-card-text h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #222;
+}
+
+.city-card-text p {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* ===== ZELLIGE ===== */
+.zellige-bg {
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 160px;
+  height: 100px;
+  background: url("/images/zellige-pattern.png") center / cover no-repeat;
+  opacity: 0.95;
+  pointer-events: none;
+}
+
+/* ===== BARRES ===== */
+.carousel-bars {
+  position: absolute;
+  right: -24px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.carousel-bars .bar {
+  width: 4px;
+  height: 26px;
+  border-radius: 4px;
+  background: rgba(210, 170, 120, 0.4);
+}
+
+.carousel-bars .bar.active {
+  background: #d2aa78;
+  height: 38px;
+}
+.city-card-carousel {
+  cursor: pointer;
+}
+
+.city-card-carousel:hover {
+  transform: scale(1.03) translateY(var(--y));
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
+}
+

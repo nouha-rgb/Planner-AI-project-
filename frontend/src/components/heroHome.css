@@ -1,0 +1,155 @@
+/* ===== HERO SECTION ===== */
+.hero-home {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+
+  /* ✅ UNE image, maîtrisée */
+  background-image: url("/images/hero-maroc.jpg");
+  background-size: cover;
+
+  /* 🔥 LA CLÉ */
+  background-position: top center;
+
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  padding: 120px 6% 80px; /* plus d’espace en haut */
+  box-sizing: border-box;
+}
+
+
+/* ===== OVERLAY ===== */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1;
+}
+
+/* ===== CONTAINER ===== */
+.hero-container {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 60px;
+  width: 100%;
+}
+
+/* ===== LEFT TEXT ===== */
+.hero-left {
+  color: white;
+}
+
+.hero-left h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.hero-left p {
+  font-size: 1.1rem;
+  max-width: 480px;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+.hero-btn {
+  background: #d4a24c;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== RIGHT COLUMN ===== */
+.hero-right {
+  max-height: 520px;
+  overflow-y: visible;
+  padding-right: 8px;
+}
+
+/* scrollbar discret */
+.hero-right::-webkit-scrollbar {
+  width: 6px;
+}
+.hero-right::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+
+/* ===== CARDS ===== */
+.carousel {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* ❌ pas d’animation auto */
+.carousel {
+  animation: none !important;
+}
+
+/* ===== CITY CARD ===== */
+.city-card {
+  display: flex;
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.city-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* image */
+.city-card img {
+  width: 210px;
+  height: 130px;
+  object-fit: cover;
+}
+
+/* info */
+.city-info {
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.city-info h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.city-info p {
+  margin-top: 6px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-right {
+    max-height: none;
+  }
+}

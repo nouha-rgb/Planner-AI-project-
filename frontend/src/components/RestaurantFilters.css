@@ -1,0 +1,50 @@
+.filters {
+  position: sticky;
+  top: 20px;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding: 18px 24px;
+  margin: -60px auto 40px;
+  width: fit-content;
+
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 22px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.filters select {
+  padding: 10px 16px;
+  border-radius: 18px;
+  border: none;
+  font-weight: 600;
+  background: white;
+  cursor: pointer;
+}
+
+.ambiance-box {
+  display: flex;
+  gap: 10px;
+}
+
+.ambiance-box button {
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid #c9a24d;
+  background: rgba(255,255,255,0.7);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ambiance-box button:hover {
+  background: #f6e3b4;
+}
+
+.ambiance-box button.active {
+  background: linear-gradient(135deg, #c9a24d, #e8c872);
+  color: white;
+  border: none;
+}

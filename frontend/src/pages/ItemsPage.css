@@ -1,0 +1,92 @@
+/* PAGE BACKGROUND */
+.hotels-page {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* HERO */
+.hotels-hero {
+  position: relative;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  text-align: center;
+}
+
+/* GRADIENT SMOOTH */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.45) 0%,
+    rgba(0, 0, 0, 0.25) 55%,
+    rgba(0, 0, 0, 0.1) 70%,
+    rgba(245, 236, 220, 1) 100%
+  );
+  z-index: 1;
+}
+
+/* HERO CONTENT */
+.hotels-hero h1,
+.filters {
+  position: relative;
+  z-index: 2;
+}
+
+.hotels-hero h1 {
+  font-size: 42px;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+
+/* FILTERS */
+.filters {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+ 
+}
+
+.filters select {
+  padding: 12px;
+  width: 220px;
+  border-radius: 10px;
+  border: none;
+}
+
+/* CONTENT (CARDS ZONE) */
+.hotels-content {
+  position: relative;
+  z-index: 3;              /* ✅ AU-DESSUS DU HERO */
+  margin-top: 0;      /* ⬆️ OPTION 2 */
+  padding: 60px 40px 40px;
+}
+
+/* GRID */
+.hotels-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 25px;
+
+  position: relative;
+  top: -200px;   /* ⬆️ MONTE UNIQUEMENT LES CARTES */
+}
+
+
+/* STATUS */
+.status {
+  text-align: center;
+  color: white;
+}

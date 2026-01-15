@@ -1,0 +1,79 @@
+.incontournables {
+  margin-top: 20px;
+}
+
+.incontournables h2 {
+  font-size: 32px;
+  color: #7a4a2e;
+  margin-bottom: 30px;
+}
+
+.incontournables-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* =========================
+   CARD
+========================= */
+.incontournable-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  background: #ffffffee;
+  border-radius: 20px;
+  overflow: hidden;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  padding: 18px;
+}
+
+/* IMAGE */
+.incontournable-card img {
+  height: 180px;
+  width: 260px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+/* CONTENU */
+.incontournable-content {
+  padding: 24px;
+}
+
+.incontournable-content h3 {
+  margin: 0;
+  font-size: 22px;
+  color: #5c3a21;
+}
+
+.incontournable-content p {
+  margin-top: 8px;
+  color: #555;
+}
+
+/* =========================
+   ZELLIGE À DROITE
+========================= */
+
+
+.incontournable-card::after {
+  content: "";
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 500px;
+  height: 200px;
+  background: url("/images/zellige-pattern.png") center / cover no-repeat;
+  opacity: 0.95;
+  pointer-events: none;
+}
+
+/* LE CONTENU RESTE AU-DESSUS */
+.incontournable-card > * {
+  position: relative;
+  z-index: 1;
+}

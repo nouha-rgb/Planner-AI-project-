@@ -1,0 +1,56 @@
+.home-container {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.cities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 30px;
+}
+
+.city-card {
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  transition: transform 0.3s;
+}
+
+.city-card:hover {
+  transform: translateY(-6px);
+}
+
+.city-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.city-content {
+  padding: 15px;
+  text-align: center;
+}
+
+.city-content h3 {
+  color: #2E3A59;
+  margin-bottom: 6px;
+}
+
+.city-content p {
+  font-size: 14px;
+  color: #555;
+}
+
+.center {
+  text-align: center;
+}
+/* Background marocain global */
+.home-page {
+  min-height: 100vh;
+  background-image: url("/images/maroc-bg.jpg"); /* TON IMAGE */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

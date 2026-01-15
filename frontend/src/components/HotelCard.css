@@ -1,0 +1,73 @@
+.hotel-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* CARD */
+.hotel-card {
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+/* IMAGE */
+.hotel-image {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+
+/* CONTENT (ZONE ZELLIGE) */
+.hotel-content {
+  position: relative;
+  padding: 18px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  overflow: hidden;
+}
+
+/* ZELLIGE UNIQUEMENT ICI */
+.hotel-content::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/zellige-pattern.png"); /* chemin correct */
+  background-size: 420px;
+  background-repeat: repeat;
+  opacity: 0.70;
+  z-index: 0;
+}
+
+/* CONTENU AU-DESSUS DU MOTIF */
+.hotel-content > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* TEXT */
+.hotel-content h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #2e3a59;
+}
+
+.city {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.rating {
+  color: #c9a24d;
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 16px;
+  color: #1a4d2e;
+}

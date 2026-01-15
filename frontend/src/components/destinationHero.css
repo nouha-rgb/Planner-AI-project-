@@ -1,0 +1,66 @@
+/* =========================
+   PAGE WRAPPER
+========================= */
+.destination-page {
+  height: 100vh;
+  overflow-y: auto;
+}
+
+/* =========================
+   HERO
+========================= */
+.destination-hero {
+  min-height: 100vh;
+  width: 100%;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.25),
+      rgba(0, 0, 0, 0.65)
+    ),
+    url("/images/cities/marrakech/hero/marrakech-hero.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  padding-left: 8%;
+
+  color: white;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+.destination-hero-content {
+  max-width: 520px;
+}
+
+.destination-hero h1 {
+  font-size: 2.6rem;   /* ⬅️ un peu plus compact */
+}
+
+.destination-hero p {
+  margin-bottom: 20px;
+}
+
+
+.destination-hero button {
+  background: linear-gradient(135deg, #d4a373, #b07d45);
+  color: white;
+  border: none;
+  padding: 14px 34px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.destination-hero button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}

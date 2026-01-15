@@ -1,0 +1,105 @@
+.filters {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+ 
+  
+}
+
+.ambiance-box button {
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.ambiance-box button.active {
+  background: #f6e3b4;
+  border-color: #c9a24d;
+  color: #6b4f1d;
+}
+.grid {
+  margin-top: -30px;   /* 🔥 LES CARTES REMONTENT */
+  padding: 40px 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 28px;
+  margin-top: 0px;     /* ⬅️ CRUCIAL */
+
+}
+
+.hero-restaurant {
+  position: relative;
+
+  min-height: 85vh;          /* 🔥 plus grand */
+  padding-top: 120px;
+  padding-bottom: 140px;     /* 🔥 laisse respirer */
+
+  background-image: url("/hero-restaurant.jpg");
+  background-size: cover;
+  background-position: center center; /* 🔥 IMPORTANT */
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Dégradé vers le background existant */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.25) 0%,
+    rgba(0,0,0,0.15) 40%,
+    rgba(246,233,211,0.9) 500%
+  );
+  z-index: 1;
+}
+
+
+
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  margin-top: -170px;   /* 🔥 FAIT MONTER LE TEXTE */
+  text-align: center;
+  color: white;
+}
+
+
+.hero-content h1 {
+  font-size: 52px;
+  font-weight: 800;
+}
+
+.hero-content p {
+  font-size: 20px;
+  opacity: 0.9;
+}
+.restaurants-page {
+  background:
+    url("/zellige-pattern.png"),
+    #f5e8d6;
+
+  background-size: 420px;
+  padding-top: 40px;
+}
+.filters-container {
+  position: relative;
+  z-index: 20;
+  margin-top: -95px;   /* 🔥 FAIT REMONTER LE FILTRE */
+  padding: 20px 30px;
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 22px;
+  box-shadow: 0 18px 45px rgba(0,0,0,0.18);
+}
+
